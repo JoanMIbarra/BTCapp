@@ -1,0 +1,27 @@
+<h1>SYMBOL: {{symbol}}</h1>
+<h1>ASK: {{ask}}</h1>
+<h1>BID: {{bid}}</h1>
+<h1>LAST: {{last}}</h1>
+<h1>LOW: {{low}}</h1>
+<h1>HIGH: {{high}}</h1>
+
+
+<script>
+     var i;
+  for (i=0;i<1 ;i++){
+       
+       if({{last}}>=({{ask}}*0.20)+{{ask}}){
+          alert('Usted debe VENDER ahora, el precio es: '+{{last}});
+         
+      } else {
+        if({{bid}}<=({{last}}-({{last}}*8.75)/100)){
+        alert('Usted debe COMPRAR ahora, el precio es: '+{{bid}});
+   
+      };
+    };
+  };
+
+setTimeout(function(){
+   window.location.reload(1);
+}, 5000);
+</script>
