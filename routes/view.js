@@ -4,9 +4,9 @@ var router = express.Router();
 const https = require("https")
 
 router.get('/', function(req, res, next) {
-  res.render('view', {symbol:symbol, ask:ask, bid:bid, last:last, low:low, high:high });
+  res.render('view', {symbol:symbol, ask:ask, bid:bid, last:last, low:low, high:high, title:title});
 });
-
+let title="Market";
 let ask = "";
 let bid="";
 let last="";
@@ -14,7 +14,7 @@ let low="";
 let high="";
 let symbol="";
 
-const url = 'https://api.hitbtc.com/api/2/public/ticker/ETHBTC'
+const url = 'https://api.hitbtc.com/api/2/public/ticker/BCHUSD'
 
 
 const interval = setInterval(() => {
